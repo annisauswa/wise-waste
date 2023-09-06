@@ -1,6 +1,14 @@
 # WISE WASTE
 
-deskripsi singkat aplikasi <br>
+<p align="center">
+<img src="https://media.tenor.com/GfSX-u7VGM4AAAAM/coding.gif" width="100%" height="100%">
+</p>
+
+## 📌 About Wise Waste
+Aplikasi Wise Waste merupakan aplikasi yang dapat membantu menghubungkan antara customer (penghasil e-waste) dengan
+perusahaan pengolah e-waste sehingga customer dapat mengolah e-waste mereka dengan praktis dan efisien<br/>
+
+## 👩‍💻 Meet our team
 NAMA KELOMPOK ANDA <br>
 Ketua Kelompok: Angelica Callysta Viera <br>
 Anggota 1: Annisa Uswa Sufia <br>
