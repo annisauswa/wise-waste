@@ -1,7 +1,7 @@
 # WISE WASTE
 
 <p align="center">
-<iframe src="https://giphy.com/embed/iIqmM5tTjmpOB9mpbn" width="480" height="268" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<img src="https://media.tenor.com/GfSX-u7VGM4AAAAM/coding.gif" width="100%" height="100%">
 </p>
 
 ## 📌 About Wise Waste
