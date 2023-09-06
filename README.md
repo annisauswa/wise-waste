@@ -1,7 +1,7 @@
 # WISE WASTE
 
 <p align="center">
-<img src="https://lpkm.psikologi.ugm.ac.id/wp-content/uploads/2018/05/Simbol-Logo-Blok.jpg">
+<iframe src="https://giphy.com/embed/iIqmM5tTjmpOB9mpbn" width="480" height="268" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </p>
 
 ## 📌 About Wise Waste
