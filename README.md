@@ -12,4 +12,4 @@ perusahaan pengolah e-waste sehingga customer dapat mengolah e-waste mereka deng
 NAMA KELOMPOK ANDA <br>
 Ketua Kelompok: Angelica Callysta Viera - 21/474719/TK/52377 <br>
 Anggota 1: Annisa Uswa Sufia <br>
-Anggota 2: Diandra Nabila Putri Nugroho <br>
+Anggota 2: Diandra Nabila Putri Nugroho-21/473599/TK/52202<br>
