@@ -10,6 +10,6 @@ perusahaan pengolah e-waste sehingga customer dapat mengolah e-waste mereka deng
 
 ## 👩‍💻 Meet our team
 Waste Warrior <br>
-Ketua Kelompok: Angelica Callysta Viera <br>
+Ketua Kelompok: Angelica Callysta Viera - 21/474719/TK/52377<br>
 Anggota 1: Annisa Uswa Sufia - 21/475357/TK/52474<br>
 Anggota 2: Diandra Nabila Putri Nugroho - 21/473599/TK/52202<br>
