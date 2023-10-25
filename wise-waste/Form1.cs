@@ -33,12 +33,14 @@ namespace wise_waste
         }
         private void CloseBtn(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Form2 f2 = new Form2();
+            f2.Show();
+            this.Hide();
         }
     }
 }
