@@ -35,8 +35,8 @@ namespace wise_waste
             if (user.Login(user.Email, user.Password))
             {
                 MessageBox.Show("Login Berhasil, mengalihkan ke Homepage");
-                NavForm homePage = new NavForm();
-                homePage.Show();
+                NavForm navForm = new NavForm();
+                navForm.Show();
                 this.Hide();
             }
             else
