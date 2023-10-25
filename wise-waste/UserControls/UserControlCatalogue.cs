@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace wise_waste.UserControls
+namespace wise_waste
 {
-    public partial class Catalogue : UserControl
+    public partial class UserControlCatalogue : UserControl
     {
-        public Catalogue()
+        public UserControlCatalogue()
         {
             InitializeComponent();
         }

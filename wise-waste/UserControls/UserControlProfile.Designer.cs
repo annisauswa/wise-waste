@@ -1,6 +1,6 @@
 ﻿namespace wise_waste.UserControls
 {
-    partial class Profile
+    partial class UserControlProfile
     {
         /// <summary> 
         /// Required designer variable.

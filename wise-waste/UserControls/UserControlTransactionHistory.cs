@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace wise_waste.UserControls
 {
-    public partial class TransactionHistory : UserControl
+    public partial class UserControlTransactionHistory : UserControl
     {
-        public TransactionHistory()
+        public UserControlTransactionHistory()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Profile_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

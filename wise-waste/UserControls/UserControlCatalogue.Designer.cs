@@ -1,6 +1,6 @@
-﻿namespace wise_waste.UserControls
+﻿namespace wise_waste
 {
-    partial class TransactionHistory
+    partial class UserControlCatalogue
     {
         /// <summary> 
         /// Required designer variable.

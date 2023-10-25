@@ -8,23 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace wise_waste.UserControls
+namespace wise_waste
 {
-    public partial class Profile : UserControl
+    public partial class UserControlProfile : UserControl
     {
-        public Profile()
+        public UserControlProfile()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Profile_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
