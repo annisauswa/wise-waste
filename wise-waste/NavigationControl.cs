@@ -28,7 +28,7 @@ namespace wise_waste
             }
         }
 
-        private void Display(int index)
+        public void Display(int index)
         {
             if(index < userControlList.Count())
             {
