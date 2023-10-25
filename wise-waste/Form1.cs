@@ -22,7 +22,6 @@ namespace wise_waste
         {
 
         }
-
         private void label6_Click(object sender, EventArgs e)
         {
         }
@@ -32,7 +31,6 @@ namespace wise_waste
             Registration registration = new Registration(tbEmail.Text, tbFirstName.Text, tbLastName.Text, tbPassword.Text, DateTime.Now);
 
         }
-
         private void CloseBtn(object sender, EventArgs e)
         {
 
