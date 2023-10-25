@@ -35,22 +35,22 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.pnProfile = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pnCatalogue = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnProfile = new System.Windows.Forms.Button();
             this.pnSell = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnSell = new System.Windows.Forms.Button();
+            this.pnCatalogue = new System.Windows.Forms.Panel();
+            this.btnCatalogue = new System.Windows.Forms.Button();
             this.pnTransHis = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnTransHis = new System.Windows.Forms.Button();
             this.pnLogout = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.sidebar.SuspendLayout();
             this.pnProfile.SuspendLayout();
-            this.pnCatalogue.SuspendLayout();
             this.pnSell.SuspendLayout();
+            this.pnCatalogue.SuspendLayout();
             this.pnTransHis.SuspendLayout();
             this.pnLogout.SuspendLayout();
             this.SuspendLayout();
@@ -105,114 +105,119 @@
             // 
             // pnProfile
             // 
-            this.pnProfile.Controls.Add(this.button1);
+            this.pnProfile.Controls.Add(this.btnProfile);
             this.pnProfile.Location = new System.Drawing.Point(3, 3);
             this.pnProfile.Name = "pnProfile";
             this.pnProfile.Size = new System.Drawing.Size(244, 64);
             this.pnProfile.TabIndex = 2;
             // 
-            // button1
+            // btnProfile
             // 
-            this.button1.BackColor = System.Drawing.Color.RosyBrown;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(241, 58);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Profile";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // pnCatalogue
-            // 
-            this.pnCatalogue.Controls.Add(this.button2);
-            this.pnCatalogue.Location = new System.Drawing.Point(3, 143);
-            this.pnCatalogue.Name = "pnCatalogue";
-            this.pnCatalogue.Size = new System.Drawing.Size(244, 64);
-            this.pnCatalogue.TabIndex = 3;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.RosyBrown;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(3, 3);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(241, 58);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Catalogue";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnProfile.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnProfile.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.Image = ((System.Drawing.Image)(resources.GetObject("btnProfile.Image")));
+            this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfile.Location = new System.Drawing.Point(3, 3);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnProfile.Size = new System.Drawing.Size(241, 58);
+            this.btnProfile.TabIndex = 0;
+            this.btnProfile.Text = "Profile";
+            this.btnProfile.UseVisualStyleBackColor = false;
+            this.btnProfile.Click += new System.EventHandler(this.button1_Click);
             // 
             // pnSell
             // 
-            this.pnSell.Controls.Add(this.button3);
+            this.pnSell.Controls.Add(this.btnSell);
             this.pnSell.Location = new System.Drawing.Point(3, 73);
             this.pnSell.Name = "pnSell";
             this.pnSell.Size = new System.Drawing.Size(244, 64);
             this.pnSell.TabIndex = 3;
             // 
-            // button3
+            // btnSell
             // 
-            this.button3.BackColor = System.Drawing.Color.RosyBrown;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(3, 3);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(241, 46);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Sell";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnSell.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnSell.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSell.Image = ((System.Drawing.Image)(resources.GetObject("btnSell.Image")));
+            this.btnSell.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSell.Location = new System.Drawing.Point(3, 3);
+            this.btnSell.Name = "btnSell";
+            this.btnSell.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnSell.Size = new System.Drawing.Size(241, 46);
+            this.btnSell.TabIndex = 0;
+            this.btnSell.Text = "Sell";
+            this.btnSell.UseVisualStyleBackColor = false;
+            this.btnSell.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // pnCatalogue
+            // 
+            this.pnCatalogue.Controls.Add(this.btnCatalogue);
+            this.pnCatalogue.Location = new System.Drawing.Point(3, 143);
+            this.pnCatalogue.Name = "pnCatalogue";
+            this.pnCatalogue.Size = new System.Drawing.Size(244, 64);
+            this.pnCatalogue.TabIndex = 3;
+            // 
+            // btnCatalogue
+            // 
+            this.btnCatalogue.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnCatalogue.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCatalogue.Image = ((System.Drawing.Image)(resources.GetObject("btnCatalogue.Image")));
+            this.btnCatalogue.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCatalogue.Location = new System.Drawing.Point(3, 3);
+            this.btnCatalogue.Name = "btnCatalogue";
+            this.btnCatalogue.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnCatalogue.Size = new System.Drawing.Size(241, 58);
+            this.btnCatalogue.TabIndex = 0;
+            this.btnCatalogue.Text = "Catalogue";
+            this.btnCatalogue.UseVisualStyleBackColor = false;
+            this.btnCatalogue.Click += new System.EventHandler(this.button2_Click);
             // 
             // pnTransHis
             // 
-            this.pnTransHis.Controls.Add(this.button4);
+            this.pnTransHis.Controls.Add(this.btnTransHis);
             this.pnTransHis.Location = new System.Drawing.Point(3, 213);
             this.pnTransHis.Name = "pnTransHis";
             this.pnTransHis.Size = new System.Drawing.Size(340, 64);
             this.pnTransHis.TabIndex = 3;
             // 
-            // button4
+            // btnTransHis
             // 
-            this.button4.BackColor = System.Drawing.Color.RosyBrown;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(3, 3);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(334, 48);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Transaction History";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnTransHis.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnTransHis.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTransHis.Image = ((System.Drawing.Image)(resources.GetObject("btnTransHis.Image")));
+            this.btnTransHis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTransHis.Location = new System.Drawing.Point(3, 3);
+            this.btnTransHis.Name = "btnTransHis";
+            this.btnTransHis.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnTransHis.Size = new System.Drawing.Size(334, 48);
+            this.btnTransHis.TabIndex = 0;
+            this.btnTransHis.Text = "Transaction History";
+            this.btnTransHis.UseVisualStyleBackColor = false;
+            this.btnTransHis.Click += new System.EventHandler(this.button4_Click);
             // 
             // pnLogout
             // 
-            this.pnLogout.Controls.Add(this.button5);
+            this.pnLogout.Controls.Add(this.btnLogout);
             this.pnLogout.Location = new System.Drawing.Point(3, 283);
             this.pnLogout.Name = "pnLogout";
             this.pnLogout.Size = new System.Drawing.Size(285, 64);
             this.pnLogout.TabIndex = 3;
             // 
-            // button5
+            // btnLogout
             // 
-            this.button5.BackColor = System.Drawing.Color.RosyBrown;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(3, 3);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(270, 58);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "Logout";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnLogout.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(3, 3);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnLogout.Size = new System.Drawing.Size(270, 58);
+            this.btnLogout.TabIndex = 0;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.button5_Click);
             // 
             // sidebarTransition
             // 
@@ -235,8 +240,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.sidebar.ResumeLayout(false);
             this.pnProfile.ResumeLayout(false);
-            this.pnCatalogue.ResumeLayout(false);
             this.pnSell.ResumeLayout(false);
+            this.pnCatalogue.ResumeLayout(false);
             this.pnTransHis.ResumeLayout(false);
             this.pnLogout.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -250,15 +255,15 @@
         private System.Windows.Forms.FlowLayoutPanel sidebar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnProfile;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Panel pnCatalogue;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCatalogue;
         private System.Windows.Forms.Panel pnSell;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnSell;
         private System.Windows.Forms.Panel pnTransHis;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnTransHis;
         private System.Windows.Forms.Panel pnLogout;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Timer sidebarTransition;
     }
 }

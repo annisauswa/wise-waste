@@ -17,6 +17,8 @@ namespace wise_waste
         public NavForm()
         {
             InitializeComponent();
+            InitializeNavigationControl();
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -64,7 +66,35 @@ namespace wise_waste
         private void InitializeNavigationControl()
         {
             List<UserControl> userControls = new List<UserControl>()
-            { new UserControlProfile(), new UserControlSell(), new UserControlCatalogue};
+            { new UserControlProfile(), new UserControlSell(), new UserControlCatalogue };
+
+            navigationControl = new NavigationControl(userControls, panel1); //masi bingung panel1 atau panel2
+            navigationControl.Display(0); //kenapa display nya error ya? harusnya method bawaan ga sih?
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            navigationControl.Display(0);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            navigationControl.Display(1);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            navigationControl.Display(2);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            navigationControl.Display(3);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            navigationControl.Display(4);
         }
     }
 }
