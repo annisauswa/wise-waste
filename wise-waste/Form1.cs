@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace wise_waste
 {
@@ -23,25 +24,23 @@ namespace wise_waste
         }
         private void label6_Click(object sender, EventArgs e)
         {
-
         }
 
         private void RegBtn(object sender, EventArgs e)
         {
-            Registration registration = new Registration();
-            registration.FirstName = tbFirstName.Text;
-            registration.LastName = tbLastName.Text;
-            registration.Password = tbPassword.Text;
-            registration.RegisterDate = DateTime.Now;
+            Registration registration = new Registration(tbEmail.Text, tbFirstName.Text, tbLastName.Text, tbPassword.Text, DateTime.Now);
+
         }
         private void CloseBtn(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Form2 f2 = new Form2();
+            f2.Show();
+            this.Hide();
         }
     }
 }

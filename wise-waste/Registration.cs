@@ -8,7 +8,7 @@ namespace wise_waste
         private string firstName;
         private string lastName;
         private string password;
-        private string registerDate;
+        private DateTime registerDate;
         public int regID
         {
             get { return _regID; }
@@ -40,9 +40,13 @@ namespace wise_waste
         }
 
         // define constructor
-        public Registration()
+        public Registration(string email, string firstName, string lastName, string password, DateTime registerDate)
         {
-
+            Email = email;
+            FirstName = firstName;
+            LastName = lastName;
+            Password = password;
+            RegisterDate = registerDate;
         }
 
         public bool Register()
