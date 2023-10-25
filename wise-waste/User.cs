@@ -25,7 +25,7 @@ namespace wise_waste
             this.password = password;
         }
 
-        public bool Login()
+        public bool Login(string Email, string Password)
         {
             // suppose we have a dummy data
             if (Email == "user" & Password == "user123")
