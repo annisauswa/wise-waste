@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace wise_waste.UserControls
+namespace wise_waste
 {
-    public partial class Sell : UserControl
+    public partial class UserControlProfile : UserControl
     {
-        public Sell()
+        public UserControlProfile()
         {
             InitializeComponent();
         }
+
     }
 }
