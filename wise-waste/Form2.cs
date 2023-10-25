@@ -28,5 +28,21 @@ namespace wise_waste
             registrationPage.Show();
             this.Hide();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            User user = new User(tbEmail.Text, tbPassword.Text);
+            if (user.Login(user.Email, user.Password))
+            {
+                MessageBox.Show("Login Berhasil, mengalihkan ke Homepage");
+                NavForm homePage = new NavForm();
+                homePage.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Login gagal");
+            }
+        }
     }
 }
