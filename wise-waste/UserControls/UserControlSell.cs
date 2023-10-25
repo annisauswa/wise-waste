@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace wise_waste.UserControls
 {
-    public partial class TransactionHistory : UserControl
+    public partial class UserControlSell : UserControl
     {
-        public TransactionHistory()
+        public UserControlSell()
         {
             InitializeComponent();
         }

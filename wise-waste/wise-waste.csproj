@@ -84,29 +84,29 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="UserControls\Catalogue.cs">
+    <Compile Include="UserControls\UserControlCatalogue.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\Catalogue.Designer.cs">
-      <DependentUpon>Catalogue.cs</DependentUpon>
+    <Compile Include="UserControls\UserControlCatalogue.Designer.cs">
+      <DependentUpon>UserControlCatalogue.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Profile.cs">
+    <Compile Include="UserControls\UserControlProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\Profile.Designer.cs">
-      <DependentUpon>Profile.cs</DependentUpon>
+    <Compile Include="UserControls\UserControlProfile.Designer.cs">
+      <DependentUpon>UserControlProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Sell.cs">
+    <Compile Include="UserControls\UserControlSell.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\Sell.Designer.cs">
-      <DependentUpon>Sell.cs</DependentUpon>
+    <Compile Include="UserControls\UserControlSell.Designer.cs">
+      <DependentUpon>UserControlSell.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\TransactionHistory.cs">
+    <Compile Include="UserControls\UserControlTransactionHistory.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\TransactionHistory.Designer.cs">
-      <DependentUpon>TransactionHistory.cs</DependentUpon>
+    <Compile Include="UserControls\UserControlTransactionHistory.Designer.cs">
+      <DependentUpon>UserControlTransactionHistory.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
