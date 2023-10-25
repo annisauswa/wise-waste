@@ -16,5 +16,10 @@ namespace wise_waste.UserControls
         {
             InitializeComponent();
         }
+
+        private void Sell_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
