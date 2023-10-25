@@ -28,7 +28,11 @@ namespace wise_waste
 
         private void RegBtn(object sender, EventArgs e)
         {
-
+            Registration registration = new Registration();
+            registration.FirstName = tbFirstName.Text;
+            registration.LastName = tbLastName.Text;
+            registration.Password = tbPassword.Text;
+            registration.RegisterDate = DateTime.Now;
         }
         private void CloseBtn(object sender, EventArgs e)
         {
