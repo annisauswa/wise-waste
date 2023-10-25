@@ -40,6 +40,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.tbEmail = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -169,12 +171,32 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.CloseBtn);
             // 
+            // tbEmail
+            // 
+            this.tbEmail.Location = new System.Drawing.Point(456, 166);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(332, 26);
+            this.tbEmail.TabIndex = 14;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(330, 167);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(71, 25);
+            this.lblEmail.TabIndex = 15;
+            this.lblEmail.Text = "Email :";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.label6);
@@ -209,6 +231,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.TextBox tbEmail;
+        private System.Windows.Forms.Label lblEmail;
     }
 }
 
