@@ -202,7 +202,7 @@
             this.Controls.Add(this.domainUpDown1);
             this.Name = "Sell";
             this.Size = new System.Drawing.Size(900, 621);
-            this.Load += new System.EventHandler(this.Sell_Load);
+            //this.Load += new System.EventHandler(this.Sell_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

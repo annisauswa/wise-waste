@@ -24,8 +24,8 @@ namespace wise_waste
 
         private void linkLabelRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Form1 f1 = new Form1();
-            f1.Show();
+            RegistrationPage registrationPage = new RegistrationPage();
+            registrationPage.Show();
             this.Hide();
         }
     }

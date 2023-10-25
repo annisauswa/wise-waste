@@ -10,12 +10,18 @@ using System.Windows.Forms;
 
 namespace wise_waste
 {
-    public partial class UserControlCatalogue : UserControl
+    public partial class RegistrationPage : Form
     {
-        public UserControlCatalogue()
+        public RegistrationPage()
         {
             InitializeComponent();
         }
 
+        private void linkLblLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.Show();
+            this.Hide();
+        }
     }
 }

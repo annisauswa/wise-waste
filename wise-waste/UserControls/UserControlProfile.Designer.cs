@@ -1,4 +1,4 @@
-﻿namespace wise_waste.UserControls
+﻿namespace wise_waste
 {
     partial class UserControlProfile
     {
@@ -112,7 +112,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Profile";
             this.Size = new System.Drawing.Size(900, 621);
-            this.Load += new System.EventHandler(this.Profile_Load);
+            //this.Load += new System.EventHandler(this.Profile_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
