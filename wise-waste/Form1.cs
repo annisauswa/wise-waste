@@ -21,7 +21,6 @@ namespace wise_waste
         {
 
         }
-
         private void label6_Click(object sender, EventArgs e)
         {
 
@@ -31,7 +30,6 @@ namespace wise_waste
         {
 
         }
-
         private void CloseBtn(object sender, EventArgs e)
         {
 
