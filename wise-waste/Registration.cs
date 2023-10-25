@@ -4,20 +4,45 @@ namespace wise_waste
 {
     public class Registration
     {
-        public string Email { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Password { get; set; }
-        public DateTime RegisterDate { get; set; }
+        private int _regID;    private string email;
+        private string firstName;
+        private string lastName;
+        private string password;
+        private string registerDate;
+        public int regID
+        {
+            get { return _regID; }
+            set { _regID = value; }
+        }
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
+        public string FirstName
+        {
+            get { return firstName; }
+            set { firstName = value; }
+        }
+        public string LastName
+        {
+            get { return lastName; }
+            set { lastName = value; }
+        }
+        public string Password
+        {
+            get { return password; }
+            set { password = value; }
+        }
+        public DateTime RegisterDate
+        {
+            set { registerDate = value; }
+        }
 
         // define constructor
-        public Registration(string email, string firstName, string lastName, string password, DateTime registerDate)
+        public Registration()
         {
-            Email = email;
-            FirstName = firstName;
-            LastName = lastName;
-            Password = password;
-            RegisterDate = registerDate;
+
         }
 
         public bool Register()
