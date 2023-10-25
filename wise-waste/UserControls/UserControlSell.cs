@@ -8,13 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace wise_waste.UserControls
+namespace wise_waste
 {
     public partial class UserControlSell : UserControl
     {
         public UserControlSell()
         {
             InitializeComponent();
+        }
+
+        private void radioBtnEwaste_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioBtnOrganik_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioBtnAnorganik_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

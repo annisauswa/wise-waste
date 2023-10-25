@@ -15,7 +15,7 @@ namespace wise_waste
         public string Address { get; private set; }
 
     // Define a constructor for user input
-        public SaleItem(string category, int weight, int price, string address)
+        public void SaleItem(string category, int weight, int price, string address)
         {
             Category = category;
             Weight = weight;
@@ -23,7 +23,7 @@ namespace wise_waste
             Address = address; // Taken from Profile database
         }
 
-        public confirmTransaction()
+        public void confirmTransaction()
         {
             //show the data filled from database and ask for user confirmation
             Console.WriteLine($"Category: {Category}");
