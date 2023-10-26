@@ -17,5 +17,9 @@ namespace wise_waste
             InitializeComponent();
         }
 
+        private void UserControlCatalogue_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
