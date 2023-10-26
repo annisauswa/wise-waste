@@ -1,4 +1,4 @@
-﻿namespace wise_waste.UserControls
+﻿namespace wise_waste
 {
     partial class UserControlProfile
     {
