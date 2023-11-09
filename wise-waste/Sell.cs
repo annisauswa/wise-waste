@@ -8,30 +8,66 @@ namespace wise_waste
 {
     internal class Sell
     {
-        public string Category { get; private set; }
-        public int Weight { get; private set; }
-        public int Price { get; private set; }
-        public int Amount => Weight * Price;
-        public string Address { get; private set; }
+        private int sell_id;
+        private int category_id;
+        private int weight;
+        private int amount;
 
-    // Define a constructor for user input
-        public void SaleItem(string category, int weight, int price, string address)
+        public int Sell_ID
         {
-            Category = category;
-            Weight = weight;
-            Price = price;
-            Address = address; // Taken from Profile database
+            get { return sell_id; }
+            set { sell_id = value; }
         }
-
-        public void confirmTransaction()
+        public int Category_ID
         {
-            //show the data filled from database and ask for user confirmation
-            Console.WriteLine($"Category: {Category}");
-            Console.WriteLine($"Weight: {Weight}");
-            Console.WriteLine($"Price: {Price}");
-            Console.WriteLine($"Amount: {Amount}");
-            Console.WriteLine($"Address {Address}");
+            get {  return category_id; }
+            set { category_id = value; }
+        }
+        public int Weight
+        {
+            get { return weight; }
+            set { weight = value; }
+        }
+        public int Amount
+        {
+            get { return amount; }
+            set { amount = value; }
+        }
+        public Sell(int category_id, int weight)
+        {
+            Category_ID = category_id;
+            Weight = weight;
+        }
+        protected virtual int CalculateAmount(int Category_ID, int Weight)
+        {
+            // Default implementation for calculating amount
+            Amount = 0;
+            return Amount;
         }
 
     }
+    internal abstract class CalculateSell : Sell
+    {
+        public CalculateSell(int category_id, int weight) : base(category_id, weight)
+        {
+        }
+        public override int CalculateAmount(int Category_ID, int Weight)
+        {
+            int price = 0;
+            if (Category_ID == 1)
+                price = 15000;
+            else if (Category_ID == 2)
+                price = 9000;
+            else if (Category_ID == 3)
+                price = 12500;
+            else
+            {
+                throw new InvalidOperationException("Unsupported Category_ID");
+            }
+
+            Amount = price * Weight;
+            return Amount;
+        }
+    }
+
 }

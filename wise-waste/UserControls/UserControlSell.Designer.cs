@@ -33,7 +33,7 @@
             this.radioBtnOrganik = new System.Windows.Forms.RadioButton();
             this.radioBtnAnorganik = new System.Windows.Forms.RadioButton();
             this.lblCategory = new System.Windows.Forms.Label();
-            this.tbSellName = new System.Windows.Forms.TextBox();
+            this.tbProdName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbSellAddress = new System.Windows.Forms.TextBox();
@@ -41,6 +41,9 @@
             this.tbAmount = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tbWeight = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnConfirmSell = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblSell
@@ -98,12 +101,12 @@
             this.lblCategory.TabIndex = 4;
             this.lblCategory.Text = "What\'s your waste category?";
             // 
-            // tbSellName
+            // tbProdName
             // 
-            this.tbSellName.Location = new System.Drawing.Point(281, 224);
-            this.tbSellName.Name = "tbSellName";
-            this.tbSellName.Size = new System.Drawing.Size(333, 20);
-            this.tbSellName.TabIndex = 5;
+            this.tbProdName.Location = new System.Drawing.Point(281, 224);
+            this.tbProdName.Name = "tbProdName";
+            this.tbProdName.Size = new System.Drawing.Size(333, 20);
+            this.tbProdName.TabIndex = 5;
             // 
             // label1
             // 
@@ -159,13 +162,44 @@
             // 
             this.tbWeight.Location = new System.Drawing.Point(281, 359);
             this.tbWeight.Name = "tbWeight";
-            this.tbWeight.Size = new System.Drawing.Size(333, 20);
+            this.tbWeight.Size = new System.Drawing.Size(307, 20);
             this.tbWeight.TabIndex = 11;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(595, 362);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(19, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "kg";
+            // 
+            // btnConfirmSell
+            // 
+            this.btnConfirmSell.Location = new System.Drawing.Point(539, 466);
+            this.btnConfirmSell.Name = "btnConfirmSell";
+            this.btnConfirmSell.Size = new System.Drawing.Size(75, 23);
+            this.btnConfirmSell.TabIndex = 14;
+            this.btnConfirmSell.Text = "Sell";
+            this.btnConfirmSell.UseVisualStyleBackColor = true;
+            this.btnConfirmSell.Click += new System.EventHandler(this.btnConfirmSell_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(437, 466);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 15;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // UserControlSell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnConfirmSell);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbWeight);
             this.Controls.Add(this.label3);
@@ -173,7 +207,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbSellAddress);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbSellName);
+            this.Controls.Add(this.tbProdName);
             this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.radioBtnAnorganik);
             this.Controls.Add(this.radioBtnOrganik);
@@ -193,7 +227,7 @@
         private System.Windows.Forms.RadioButton radioBtnOrganik;
         private System.Windows.Forms.RadioButton radioBtnAnorganik;
         private System.Windows.Forms.Label lblCategory;
-        private System.Windows.Forms.TextBox tbSellName;
+        private System.Windows.Forms.TextBox tbProdName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbSellAddress;
@@ -201,5 +235,8 @@
         private System.Windows.Forms.TextBox tbAmount;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbWeight;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnConfirmSell;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
