@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NavForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.pnProfile = new System.Windows.Forms.Panel();
             this.btnProfile = new System.Windows.Forms.Button();
@@ -64,8 +64,19 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1774, 56);
+            this.panel1.Size = new System.Drawing.Size(958, 56);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(57, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // label1
             // 
@@ -76,20 +87,6 @@
             this.label1.Size = new System.Drawing.Size(153, 37);
             this.label1.TabIndex = 2;
             this.label1.Text = "Wise Waste";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // sidebar
             // 
@@ -102,7 +99,7 @@
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 56);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(289, 823);
+            this.sidebar.Size = new System.Drawing.Size(289, 490);
             this.sidebar.TabIndex = 1;
             // 
             // pnProfile
@@ -119,10 +116,10 @@
             this.btnProfile.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile.Image = ((System.Drawing.Image)(resources.GetObject("btnProfile.Image")));
             this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProfile.Location = new System.Drawing.Point(-11, -10);
+            this.btnProfile.Location = new System.Drawing.Point(-11, -17);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnProfile.Size = new System.Drawing.Size(268, 86);
+            this.btnProfile.Size = new System.Drawing.Size(319, 93);
             this.btnProfile.TabIndex = 0;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = false;
@@ -145,7 +142,7 @@
             this.btnSell.Location = new System.Drawing.Point(-11, -17);
             this.btnSell.Name = "btnSell";
             this.btnSell.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnSell.Size = new System.Drawing.Size(268, 91);
+            this.btnSell.Size = new System.Drawing.Size(319, 91);
             this.btnSell.TabIndex = 0;
             this.btnSell.Text = "Sell";
             this.btnSell.UseVisualStyleBackColor = false;
@@ -168,7 +165,7 @@
             this.btnCatalogue.Location = new System.Drawing.Point(-11, -13);
             this.btnCatalogue.Name = "btnCatalogue";
             this.btnCatalogue.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnCatalogue.Size = new System.Drawing.Size(284, 95);
+            this.btnCatalogue.Size = new System.Drawing.Size(323, 95);
             this.btnCatalogue.TabIndex = 0;
             this.btnCatalogue.Text = "Catalogue";
             this.btnCatalogue.UseVisualStyleBackColor = false;
@@ -191,7 +188,7 @@
             this.btnTransHis.Location = new System.Drawing.Point(-13, -12);
             this.btnTransHis.Name = "btnTransHis";
             this.btnTransHis.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnTransHis.Size = new System.Drawing.Size(332, 97);
+            this.btnTransHis.Size = new System.Drawing.Size(343, 97);
             this.btnTransHis.TabIndex = 0;
             this.btnTransHis.Text = "Transaction History";
             this.btnTransHis.UseVisualStyleBackColor = false;
@@ -215,7 +212,7 @@
             this.btnLogout.Location = new System.Drawing.Point(-13, -14);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnLogout.Size = new System.Drawing.Size(313, 86);
+            this.btnLogout.Size = new System.Drawing.Size(325, 86);
             this.btnLogout.TabIndex = 0;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -232,14 +229,15 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1774, 879);
+            this.panel2.Size = new System.Drawing.Size(958, 546);
             this.panel2.TabIndex = 3;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // NavForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1774, 879);
+            this.ClientSize = new System.Drawing.Size(958, 546);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -264,7 +262,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.FlowLayoutPanel sidebar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnProfile;
@@ -279,5 +276,6 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Timer sidebarTransition;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

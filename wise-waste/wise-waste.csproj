@@ -166,6 +166,9 @@
     <EmbeddedResource Include="UserControls\UserControlCatalogue.resx">
       <DependentUpon>UserControlCatalogue.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlProfile.resx">
+      <DependentUpon>UserControlProfile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlSell.resx">
       <DependentUpon>UserControlSell.cs</DependentUpon>
     </EmbeddedResource>

@@ -23,7 +23,7 @@ namespace wise_waste
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            sidebarTransition.Start();
         }
 
         bool sidebarExpand = true;
@@ -32,7 +32,7 @@ namespace wise_waste
             if (sidebarExpand)
             {
                 sidebar.Width -= 10;
-                if(sidebar.Width <= 84)
+                if(sidebar.Width <= 35)
                 {
                     sidebarExpand = false;
                     sidebarTransition.Stop();
@@ -45,7 +45,7 @@ namespace wise_waste
             else
             {
                 sidebar.Width += 10;
-                if (sidebar.Width >= 306)
+                if (sidebar.Width >= 150)
                 {
                     sidebarExpand = true;
                     sidebarTransition.Stop();
@@ -95,6 +95,16 @@ namespace wise_waste
         private void button5_Click(object sender, EventArgs e)
         {
             navigationControl.Display(4);
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            sidebarTransition.Start();
         }
     }
 }

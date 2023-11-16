@@ -41,9 +41,10 @@
             // 
             // domainUpDown1
             // 
-            this.domainUpDown1.Location = new System.Drawing.Point(136, 85);
+            this.domainUpDown1.Location = new System.Drawing.Point(272, 163);
+            this.domainUpDown1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.domainUpDown1.Name = "domainUpDown1";
-            this.domainUpDown1.Size = new System.Drawing.Size(0, 20);
+            this.domainUpDown1.Size = new System.Drawing.Size(0, 31);
             this.domainUpDown1.TabIndex = 0;
             this.domainUpDown1.Text = "domainUpDown1";
             // 
@@ -51,41 +52,46 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(297, 53);
+            this.label1.Location = new System.Drawing.Point(363, 85);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(189, 24);
+            this.label1.Size = new System.Drawing.Size(366, 44);
             this.label1.TabIndex = 1;
             this.label1.Text = "Transaction History";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(317, 179);
+            this.label2.Location = new System.Drawing.Point(669, 315);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.Size = new System.Drawing.Size(0, 25);
             this.label2.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(308, 234);
+            this.label3.Location = new System.Drawing.Point(651, 421);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 20);
+            this.label3.Size = new System.Drawing.Size(0, 37);
             this.label3.TabIndex = 3;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(308, 176);
+            this.label5.Location = new System.Drawing.Point(651, 309);
+            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 20);
+            this.label5.Size = new System.Drawing.Size(0, 37);
             this.label5.TabIndex = 8;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(649, 387);
+            this.button3.Location = new System.Drawing.Point(1298, 744);
+            this.button3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(0, 0);
             this.button3.TabIndex = 12;
@@ -95,16 +101,19 @@
             // dgvDataTransaksi
             // 
             this.dgvDataTransaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDataTransaksi.Location = new System.Drawing.Point(85, 100);
+            this.dgvDataTransaksi.Location = new System.Drawing.Point(98, 160);
+            this.dgvDataTransaksi.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.dgvDataTransaksi.Name = "dgvDataTransaksi";
-            this.dgvDataTransaksi.Size = new System.Drawing.Size(618, 252);
+            this.dgvDataTransaksi.RowHeadersWidth = 82;
+            this.dgvDataTransaksi.Size = new System.Drawing.Size(814, 358);
             this.dgvDataTransaksi.TabIndex = 13;
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(628, 364);
+            this.btnLoad.Location = new System.Drawing.Point(1256, 700);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(75, 23);
+            this.btnLoad.Size = new System.Drawing.Size(150, 44);
             this.btnLoad.TabIndex = 14;
             this.btnLoad.Text = "Load Data";
             this.btnLoad.UseVisualStyleBackColor = true;
@@ -112,7 +121,7 @@
             // 
             // UserControlTransactionHistory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.dgvDataTransaksi);
@@ -122,8 +131,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.domainUpDown1);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "UserControlTransactionHistory";
-            this.Size = new System.Drawing.Size(800, 450);
+            this.Size = new System.Drawing.Size(943, 546);
             this.Load += new System.EventHandler(this.UserControlTransactionHistory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataTransaksi)).EndInit();
             this.ResumeLayout(false);
