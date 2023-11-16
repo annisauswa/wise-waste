@@ -1,4 +1,6 @@
-﻿namespace wise_waste
+﻿using System;
+
+namespace wise_waste
 {
     partial class Form2
     {
@@ -82,6 +84,7 @@
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // tbEmail
             // 

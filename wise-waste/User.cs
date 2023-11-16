@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 
 namespace wise_waste
 {
@@ -25,6 +26,7 @@ namespace wise_waste
             this.password = password;
         }
 
+        
         public bool Login(string Email, string Password)
         {
             // suppose we have a dummy data

@@ -66,7 +66,7 @@ namespace wise_waste
         public void InitializeNavigationControl()
         {
             List<UserControl> userControls = new List<UserControl>()
-            { new UserControlProfile(), new UserControlSell(), new UserControlCatalogue() };
+            { new UserControlProfile(), new UserControlSell(), new UserControlCatalogue(), new UserControls.UserControlTransactionHistory() };
 
             navigationControl = new NavigationControl(userControls, panel2);
             navigationControl.Display(0);
