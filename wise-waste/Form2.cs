@@ -40,32 +40,17 @@ namespace wise_waste
             registrationPage.Show();
             this.Hide();
         }
-        private bool Login(string email, string password)
+        public bool Login(string Email, string Password)
         {
-            using (NpgsqlConnection connection = new NpgsqlConnection(connstring))
+            // suppose we have a dummy data
+            if (Email == "user" & Password == "user123")
             {
-                connection.Open();
-
-                string query = "SELECT password FROM users WHERE email = @Email";
-                using (NpgsqlCommand cmd = new NpgsqlCommand(query, connection))
-                {
-                    cmd.Parameters.AddWithValue("@Email", email);
-
-                    using (NpgsqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            string storedPassword = reader["password"].ToString();
-
-                            if (storedPassword == password)
-                            {
-                                return true;
-                            }
-                        }
-                    }
-                }
+                return true;
             }
-            return false; // Authentication failed
+            else
+            {
+                return false;
+            }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

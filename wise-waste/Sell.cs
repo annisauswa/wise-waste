@@ -9,24 +9,14 @@ namespace wise_waste
     internal class Sell
     {
         private int sell_id;
-        private int category_id;
-        private int weight;
+        protected int category_id;
+        protected int weight;
         private int amount;
 
         public int Sell_ID
         {
             get { return sell_id; }
             set { sell_id = value; }
-        }
-        public int Category_ID
-        {
-            get {  return category_id; }
-            set { category_id = value; }
-        }
-        public int Weight
-        {
-            get { return weight; }
-            set { weight = value; }
         }
         public int Amount
         {
@@ -35,10 +25,10 @@ namespace wise_waste
         }
         public Sell(int category_id, int weight)
         {
-            Category_ID = category_id;
-            Weight = weight;
+            this.category_id = category_id;
+            this.weight = weight;
         }
-        protected virtual int CalculateAmount(int Category_ID, int Weight)
+        public virtual int CalculateAmount()
         {
             // Default implementation for calculating amount
             Amount = 0;
@@ -51,21 +41,21 @@ namespace wise_waste
         public CalculateSell(int category_id, int weight) : base(category_id, weight)
         {
         }
-        public override int CalculateAmount(int Category_ID, int Weight)
+        public override int CalculateAmount()
         {
             int price = 0;
-            if (Category_ID == 1)
+            if (category_id == 1)
                 price = 15000;
-            else if (Category_ID == 2)
+            else if (category_id == 2)
                 price = 9000;
-            else if (Category_ID == 3)
+            else if (category_id == 3)
                 price = 12500;
             else
             {
                 throw new InvalidOperationException("Unsupported Category_ID");
             }
 
-            Amount = price * Weight;
+            Amount = price * weight;
             return Amount;
         }
     }
