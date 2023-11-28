@@ -95,6 +95,9 @@ namespace wise_waste
         private void button5_Click(object sender, EventArgs e)
         {
             navigationControl.Display(4);
+            this.Close();
+            Form2 form2 = new Form2();
+            form2.Show();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
