@@ -97,6 +97,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserSession.cs" />
     <None Include=".env" />
     <Compile Include="DotEnv.cs" />
     <Compile Include="NavForm.cs">
