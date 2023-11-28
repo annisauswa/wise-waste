@@ -37,13 +37,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbSellAddress = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.tbAmount = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tbWeight = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnConfirmSell = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.totalAmount = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblSell
@@ -62,42 +62,39 @@
             this.radioBtnEwaste.AutoSize = true;
             this.radioBtnEwaste.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioBtnEwaste.Location = new System.Drawing.Point(178, 157);
-            this.radioBtnEwaste.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.radioBtnEwaste.Margin = new System.Windows.Forms.Padding(6);
             this.radioBtnEwaste.Name = "radioBtnEwaste";
             this.radioBtnEwaste.Size = new System.Drawing.Size(102, 28);
             this.radioBtnEwaste.TabIndex = 1;
             this.radioBtnEwaste.TabStop = true;
             this.radioBtnEwaste.Text = "Ewaste";
             this.radioBtnEwaste.UseVisualStyleBackColor = true;
-            this.radioBtnEwaste.CheckedChanged += new System.EventHandler(this.radioBtnEwaste_CheckedChanged);
             // 
             // radioBtnOrganik
             // 
             this.radioBtnOrganik.AutoSize = true;
             this.radioBtnOrganik.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioBtnOrganik.Location = new System.Drawing.Point(360, 157);
-            this.radioBtnOrganik.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.radioBtnOrganik.Margin = new System.Windows.Forms.Padding(6);
             this.radioBtnOrganik.Name = "radioBtnOrganik";
             this.radioBtnOrganik.Size = new System.Drawing.Size(182, 28);
             this.radioBtnOrganik.TabIndex = 2;
             this.radioBtnOrganik.TabStop = true;
             this.radioBtnOrganik.Text = "Sampah Organik";
             this.radioBtnOrganik.UseVisualStyleBackColor = true;
-            this.radioBtnOrganik.CheckedChanged += new System.EventHandler(this.radioBtnOrganik_CheckedChanged);
             // 
             // radioBtnAnorganik
             // 
             this.radioBtnAnorganik.AutoSize = true;
             this.radioBtnAnorganik.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioBtnAnorganik.Location = new System.Drawing.Point(614, 157);
-            this.radioBtnAnorganik.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.radioBtnAnorganik.Margin = new System.Windows.Forms.Padding(6);
             this.radioBtnAnorganik.Name = "radioBtnAnorganik";
             this.radioBtnAnorganik.Size = new System.Drawing.Size(202, 28);
             this.radioBtnAnorganik.TabIndex = 3;
             this.radioBtnAnorganik.TabStop = true;
             this.radioBtnAnorganik.Text = "Sampah Anorganik";
             this.radioBtnAnorganik.UseVisualStyleBackColor = true;
-            this.radioBtnAnorganik.CheckedChanged += new System.EventHandler(this.radioBtnAnorganik_CheckedChanged);
             // 
             // lblCategory
             // 
@@ -113,7 +110,7 @@
             // tbProdName
             // 
             this.tbProdName.Location = new System.Drawing.Point(178, 227);
-            this.tbProdName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tbProdName.Margin = new System.Windows.Forms.Padding(6);
             this.tbProdName.Name = "tbProdName";
             this.tbProdName.Size = new System.Drawing.Size(662, 31);
             this.tbProdName.TabIndex = 5;
@@ -143,26 +140,15 @@
             // tbSellAddress
             // 
             this.tbSellAddress.Location = new System.Drawing.Point(180, 300);
-            this.tbSellAddress.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tbSellAddress.Margin = new System.Windows.Forms.Padding(6);
             this.tbSellAddress.Name = "tbSellAddress";
             this.tbSellAddress.Size = new System.Drawing.Size(662, 31);
             this.tbSellAddress.TabIndex = 7;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(436, 426);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 24);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Total Amount";
-            // 
             // tbAmount
             // 
             this.tbAmount.Location = new System.Drawing.Point(614, 419);
-            this.tbAmount.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tbAmount.Margin = new System.Windows.Forms.Padding(6);
             this.tbAmount.Name = "tbAmount";
             this.tbAmount.Size = new System.Drawing.Size(226, 31);
             this.tbAmount.TabIndex = 9;
@@ -181,7 +167,7 @@
             // tbWeight
             // 
             this.tbWeight.Location = new System.Drawing.Point(177, 368);
-            this.tbWeight.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tbWeight.Margin = new System.Windows.Forms.Padding(6);
             this.tbWeight.Name = "tbWeight";
             this.tbWeight.Size = new System.Drawing.Size(610, 31);
             this.tbWeight.TabIndex = 11;
@@ -200,7 +186,7 @@
             // 
             this.btnConfirmSell.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmSell.Location = new System.Drawing.Point(692, 462);
-            this.btnConfirmSell.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnConfirmSell.Margin = new System.Windows.Forms.Padding(6);
             this.btnConfirmSell.Name = "btnConfirmSell";
             this.btnConfirmSell.Size = new System.Drawing.Size(150, 42);
             this.btnConfirmSell.TabIndex = 14;
@@ -212,23 +198,33 @@
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(516, 462);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(6);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(150, 42);
             this.btnCancel.TabIndex = 15;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
+            // totalAmount
+            // 
+            this.totalAmount.Location = new System.Drawing.Point(428, 417);
+            this.totalAmount.Name = "totalAmount";
+            this.totalAmount.Size = new System.Drawing.Size(177, 36);
+            this.totalAmount.TabIndex = 16;
+            this.totalAmount.Text = "Total Amount";
+            this.totalAmount.UseVisualStyleBackColor = true;
+            this.totalAmount.Click += new System.EventHandler(this.totalAmount_Click);
+            // 
             // UserControlSell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.totalAmount);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirmSell);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbWeight);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.tbAmount);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbSellAddress);
@@ -239,7 +235,7 @@
             this.Controls.Add(this.radioBtnOrganik);
             this.Controls.Add(this.radioBtnEwaste);
             this.Controls.Add(this.lblSell);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "UserControlSell";
             this.Size = new System.Drawing.Size(943, 546);
             this.Load += new System.EventHandler(this.UserControlSell_Load_1);
@@ -259,12 +255,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbSellAddress;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbAmount;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbWeight;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnConfirmSell;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button totalAmount;
     }
 }
