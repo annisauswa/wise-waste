@@ -38,18 +38,6 @@ namespace wise_waste
             registrationPage.Show();
             this.Hide();
         }
-        public bool Login(string Email, string Password)
-        {
-            // suppose we have a dummy data
-            if (Email == "user" & Password == "user123")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
 
         public void btnLogin_Click(object sender, EventArgs e)
         {
@@ -62,10 +50,20 @@ namespace wise_waste
                 cmd.Parameters.AddWithValue("_password", txtPassword.Text);
 
                 int result = (int)cmd.ExecuteScalar();
-                conn.Close();
+                
 
                 if(result == 1)
                 {
+                    sql = @"select register_id from register where email = @_email";
+                    cmd = new NpgsqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("_email", txtEmail.Text);
+                    object userId = cmd.ExecuteScalar();
+
+                    if (userId != null && userId != DBNull.Value)
+                    {
+                        UserSession.Instance.SetUserId(Convert.ToInt32(userId));
+                    }
+                    conn.Close();
                     MessageBox.Show("Login Berhasil, mengalihkan ke Homepage");
                     NavForm navForm = new NavForm();
                     navForm.Show();
