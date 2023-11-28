@@ -18,13 +18,11 @@ namespace wise_waste
         {
             InitializeComponent();
         }
-        private NpgsqlConnection conn;
+        public NpgsqlConnection conn;
         string connstring = "Host=52.249.192.53;port=5432;Username=postgres;Password=Viera_angel29;Database=junpro";
-        public DataTable dt;
         public static NpgsqlCommand cmd;
-        private string sql = null;
-        private DataGridViewRow r;
-        private void Form2_Load(object sender, EventArgs e)
+        public string sql = null;
+        public void Form2_Load(object sender, EventArgs e)
         {
             conn = new NpgsqlConnection(connstring);
         }
@@ -53,11 +51,20 @@ namespace wise_waste
             }
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        public void btnLogin_Click(object sender, EventArgs e)
         {
             try
             {
-                if(Login(tbEmail.Text, tbPassword.Text))
+                conn.Open();
+                sql = @"select * from login(:_email, :_password)";
+                cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("_email", txtEmail.Text);
+                cmd.Parameters.AddWithValue("_password", txtPassword.Text);
+
+                int result = (int)cmd.ExecuteScalar();
+                conn.Close();
+
+                if(result == 1)
                 {
                     MessageBox.Show("Login Berhasil, mengalihkan ke Homepage");
                     NavForm navForm = new NavForm();
@@ -66,18 +73,24 @@ namespace wise_waste
                 }
                 else
                 {
-                    MessageBox.Show("Login gagal");
+                    MessageBox.Show("Login gagal", "Tolong cek email dan password anda!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message, "FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                conn.Close();
             }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Form2_Load_1(object sender, EventArgs e)
+        {
+            conn = new NpgsqlConnection(connstring);
         }
     }
 }
