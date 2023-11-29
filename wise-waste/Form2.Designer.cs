@@ -45,10 +45,9 @@ namespace wise_waste
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(102, 76);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(153, 117);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 17);
+            this.label1.Size = new System.Drawing.Size(71, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Email :";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -57,19 +56,17 @@ namespace wise_waste
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(76, 144);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(114, 202);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 17);
+            this.label2.Size = new System.Drawing.Size(109, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Password :";
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(120, 222);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogin.Location = new System.Drawing.Point(244, 339);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.Size = new System.Drawing.Size(112, 35);
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -77,10 +74,9 @@ namespace wise_waste
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(257, 222);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Location = new System.Drawing.Point(450, 339);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.Size = new System.Drawing.Size(112, 35);
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -88,48 +84,47 @@ namespace wise_waste
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(160, 76);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Location = new System.Drawing.Point(240, 117);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(216, 20);
+            this.txtEmail.Size = new System.Drawing.Size(322, 26);
             this.txtEmail.TabIndex = 4;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(160, 145);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Location = new System.Drawing.Point(240, 203);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(216, 20);
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(322, 26);
             this.txtPassword.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(140, 25);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label3.Location = new System.Drawing.Point(210, 38);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(216, 24);
+            this.label3.Size = new System.Drawing.Size(311, 32);
             this.label3.TabIndex = 6;
             this.label3.Text = "Hello, Welcome Back!";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(117, 188);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label5.Location = new System.Drawing.Point(225, 265);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 13);
+            this.label5.Size = new System.Drawing.Size(248, 25);
             this.label5.TabIndex = 8;
             this.label5.Text = "Don\'t have an account yet?";
             // 
             // linkLabelRegister
             // 
             this.linkLabelRegister.AutoSize = true;
-            this.linkLabelRegister.Location = new System.Drawing.Point(257, 188);
-            this.linkLabelRegister.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkLabelRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.linkLabelRegister.Location = new System.Drawing.Point(479, 265);
             this.linkLabelRegister.Name = "linkLabelRegister";
-            this.linkLabelRegister.Size = new System.Drawing.Size(46, 13);
+            this.linkLabelRegister.Size = new System.Drawing.Size(83, 25);
             this.linkLabelRegister.TabIndex = 9;
             this.linkLabelRegister.TabStop = true;
             this.linkLabelRegister.Text = "Register";
@@ -137,9 +132,10 @@ namespace wise_waste
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 284);
+            this.BackColor = System.Drawing.Color.LightPink;
+            this.ClientSize = new System.Drawing.Size(718, 437);
             this.Controls.Add(this.linkLabelRegister);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
@@ -149,9 +145,8 @@ namespace wise_waste
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.Form2_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();

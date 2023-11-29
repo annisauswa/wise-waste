@@ -1,4 +1,7 @@
-﻿using System;
+﻿using System.Data;
+using Npgsql;
+using System.Windows.Forms;
+
 
 namespace wise_waste
 {
@@ -8,7 +11,7 @@ namespace wise_waste
         private string firstName;
         private string lastName;
         private string password;
-        private DateTime registerDate;
+        //private DateTime registerDate;
         public int regID
         {
             get { return _regID; }
@@ -34,19 +37,19 @@ namespace wise_waste
             get { return password; }
             set { password = value; }
         }
-        public DateTime RegisterDate
-        {
-            set { registerDate = value; }
-        }
+        //public DateTime RegisterDate
+        //{
+           // set { registerDate = value; }
+        //}
 
         // define constructor
-        public Registration(string email, string firstName, string lastName, string password, DateTime registerDate)
+        public Registration(string email, string firstName, string lastName, string password) //DateTime registerDate)
         {
             Email = email;
             FirstName = firstName;
             LastName = lastName;
             Password = password;
-            RegisterDate = registerDate;
+            //RegisterDate = registerDate;
         }
 
         public bool Register()

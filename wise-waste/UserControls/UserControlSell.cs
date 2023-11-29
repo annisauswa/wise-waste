@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Net;
+using System.Xml.Linq;
 
 namespace wise_waste
 {
@@ -33,30 +35,88 @@ namespace wise_waste
             conn = new NpgsqlConnection(connstring);
         }
 
-        private void radioBtnEwaste_CheckedChanged(object sender, EventArgs e)
-        {
-            selectedValue = 1;
-        }
-
-        private void radioBtnOrganik_CheckedChanged(object sender, EventArgs e)
-        {
-            selectedValue = 2;
-        }
-
-        private void radioBtnAnorganik_CheckedChanged(object sender, EventArgs e)
-        {
-            selectedValue = 3;
-        }
 
         private void btnConfirmSell_Click(object sender, EventArgs e)
         {
-            
+            conn = new NpgsqlConnection(connstring);
+            try
+            {
+                conn.Open();
+                sql = "insert into sell(register_id, category_id, prod_name, amount) values (@register_id, @category_id, @prod_name, @amount)";
+                cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@register_id", register_id);
+                cmd.Parameters.AddWithValue("@category_id", category_id);
+                cmd.Parameters.AddWithValue("@prod_name", tbProdName.Text);
+                cmd.Parameters.AddWithValue("@amount", Convert.ToInt32(tbAmount.Text));
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Sale data has been successfully added to the database!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Failed to add sale data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                conn.Close();
+            }
         }
 
+        private int register_id = UserSession.Instance.UserId;
         private void UserControlSell_Load_1(object sender, EventArgs e)
         {
+            conn = new NpgsqlConnection(connstring);
+            try
+            {
+                conn.Open();
+                sql = "select address from register where register_id=@register_id";
+                cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@register_id", register_id);
+                NpgsqlDataReader reader = cmd.ExecuteReader();
 
+                // Check if there are rows returned
+                if (reader.Read())
+                {
+                    // Read the value from the "firstname" column and assign it to the TextBox
+                    tbSellAddress.Text = reader["address"].ToString();
+                }
 
+                // Close the data reader and the connection
+                reader.Close();
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Load FAIL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                conn.Close();
+            }
+
+        }
+
+        int category_id = 0;
+        private void totalAmount_Click(object sender, EventArgs e)
+        {
+            int harga_waste = 0;
+            if (radioBtnEwaste.Checked)
+            {
+                harga_waste = 15000;
+                category_id = 1;
+            }
+            else if (radioBtnOrganik.Checked)
+            {
+                harga_waste = 9000;
+                category_id = 2;
+            }
+                
+            else if (radioBtnAnorganik.Checked)
+            {
+                harga_waste = 12500;
+                category_id = 2;
+            }
+
+            harga_waste *= int.Parse(tbWeight.Text);
+
+            tbAmount.Text = harga_waste.ToString();
         }
     }
 }
