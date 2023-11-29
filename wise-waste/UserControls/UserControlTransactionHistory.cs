@@ -25,6 +25,7 @@ namespace wise_waste.UserControls
         public static NpgsqlCommand cmd;
         private string sql = null;
         private DataGridViewRow r;
+        private int userId = UserSession.Instance.UserId;
 
         private void UserControlTransactionHistory_Load(object sender, EventArgs e)
         {
@@ -37,8 +38,9 @@ namespace wise_waste.UserControls
             {
                 conn.Open();
                 dgvDataTransaksi.DataSource = null;
-                sql = "select * from sell_select()";
+                sql = "select * from sell where register_id=@register_id;";
                 cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@register_id", userId);
                 dt = new DataTable();
                 NpgsqlDataReader rd = cmd.ExecuteReader();
                 dt.Load(rd);
