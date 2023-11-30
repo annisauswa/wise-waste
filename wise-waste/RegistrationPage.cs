@@ -58,5 +58,10 @@ namespace wise_waste
                 MessageBox.Show("Error:" + ex.Message, "Registration Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -13,9 +13,17 @@ namespace wise_waste
 {
     public partial class UserControlProfile : UserControl
     {
+        List<string> listKota = new List<string>();
         public UserControlProfile()
         {
             InitializeComponent();
+            listKota = Profile.GetKotaList();
+            foreach (string kota in listKota)
+            {
+                tbAddress.AutoCompleteCustomSource.Add(kota);
+                tbAddress.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                tbAddress.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            }
         }
 
         public NpgsqlConnection conn;

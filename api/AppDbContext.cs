@@ -8,6 +8,6 @@ namespace api
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<SellDbContext> Sell { get; set; }
+        public DbSet<Sell> Sell { get; set; }
     }
 }
