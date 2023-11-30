@@ -11,13 +11,13 @@ namespace api.Controllers
     {
         private readonly SellRepository _sellRepository;
 
-        public SellController(SellDbContext context)
+        public SellController(Sell context)
         {
             _sellRepository = new SellRepository(context);
         }
 
         [HttpGet]
-        public List<SellDbContext> Get()
+        public List<Sell> Get()
         {
             return _sellRepository.GetAllSell();
         }

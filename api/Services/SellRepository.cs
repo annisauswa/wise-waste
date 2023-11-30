@@ -4,14 +4,14 @@ namespace api.Services
 {
     public class SellRepository
     {
-        private readonly SellDbContext _context;
+        private readonly Sell _context;
 
-        public SellRepository(SellDbContext context)
+        public SellRepository(Sell context)
         {
             _context = context;
         }
 
-        public List<SellDbContext> GetAllSell()
+        public List<Sell> GetAllSell()
         {
             return _context.Sells.ToList();
         }

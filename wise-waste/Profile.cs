@@ -4,6 +4,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RestSharp;
+using Newtonsoft.Json;
 
 namespace wise_waste
 {
@@ -50,6 +52,23 @@ namespace wise_waste
         public void DeleteUser()
         {
             // method to delete user that connect to database
+        }
+        public static List<string> GetKotaList()
+        {
+            List<string> returnList = new List<string>();
+            var client = new RestClient("https://api.rajaongkir.com/starter/city");
+            var request = new RestRequest(Method.GET);
+            request.AddHeader("key", "c31a7ac4eaed9d6d966f5af4cf2aa4b9");
+            IRestResponse response = client.Execute(request);
+            JsonObject obj = (JsonObject)SimpleJson.DeserializeObject(response.Content);
+            JsonObject rajaObj = (JsonObject)obj["rajaongkir"];
+            JsonArray cityListArray = (JsonArray)rajaObj["results"];
+            foreach(JsonObject city in cityListArray)
+            {
+                returnList.Add((string)city["city_name"]);
+            }
+            return returnList;
+
         }
     }
 

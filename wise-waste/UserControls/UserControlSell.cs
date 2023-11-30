@@ -96,7 +96,25 @@ namespace wise_waste
         int category_id = 0;
         private void totalAmount_Click(object sender, EventArgs e)
         {
-            int harga_waste = 0;
+            conn.Open();
+            sql = "select address from register where register_id=@register_id";
+            cmd = new NpgsqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@register_id", register_id);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+
+            // Check if there are rows returned
+            if (reader.Read())
+            {
+                // Read the value from the "firstname" column and assign it to the TextBox
+                tbSellAddress.Text = reader["address"].ToString();
+            }
+
+            // Close the data reader and the connection
+            reader.Close();
+
+            conn.Close();
+            float harga_waste = 0;
+
             if (radioBtnEwaste.Checked)
             {
                 harga_waste = 15000;
@@ -114,9 +132,33 @@ namespace wise_waste
                 category_id = 2;
             }
 
-            harga_waste *= int.Parse(tbWeight.Text);
+            try
+            {
+                if(tbWeight.Text.Length > 0)
+                {
+                    harga_waste *= float.Parse(tbWeight.Text);
+                    tbAmount.Text = harga_waste.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Mohon pilih kategori dan masukkan total berat sampah", "UNCOMPLETE FORM!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
-            tbAmount.Text = harga_waste.ToString();
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            tbProdName.Text = String.Empty;
+            tbWeight.Text = String.Empty;
+            tbSellAddress.Text = String.Empty;
+            tbAmount.Text = String.Empty;
+            radioBtnEwaste.Checked = false;
+            radioBtnAnorganik.Checked = false;
+            radioBtnOrganik.Checked = false;
         }
     }
 }
