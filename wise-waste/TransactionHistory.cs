@@ -18,7 +18,7 @@ namespace wise_waste
             Category = category;
             Weight = weight;
             Price = price;
-            Address = address; // Taken from Profile database
+            Address = address;
         }
 
         public void ShowTransactionHistory()

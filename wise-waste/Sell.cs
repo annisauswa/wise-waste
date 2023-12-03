@@ -30,7 +30,6 @@ namespace wise_waste
         }
         public virtual int CalculateAmount()
         {
-            // Default implementation for calculating amount
             Amount = 0;
             return Amount;
         }
