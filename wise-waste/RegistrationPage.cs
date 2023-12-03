@@ -38,28 +38,51 @@ namespace wise_waste
             try
             {
                 conn.Open();
-                sql = @"select * from register_insert(:_email,:_firstName, :_lastName, :_password)";
+
+                // Check if email is already registered
+                sql = @"SELECT COUNT(*) FROM register WHERE email = :_email";
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("_email", tbEmail.Text);
-                cmd.Parameters.AddWithValue("_firstName", tbFirstName.Text);
-                cmd.Parameters.AddWithValue("_lastName", tbLastName.Text);
-                cmd.Parameters.AddWithValue("_password", tbPassword.Text);
-                if ((int)cmd.ExecuteScalar() == 1)
+                int emailCount = Convert.ToInt32(cmd.ExecuteScalar());
+
+                if (emailCount > 0)
                 {
-                    MessageBox.Show("Anda berhasil mendaftarkan akun Anda!", "Well done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Email is already registered. Please use a different email address.", "Registration Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     conn.Close();
-                    Form2 f2 = new Form2();
-                    f2.Show();
-                    this.Hide();
+                }
+                else
+                {
+                    // Proceed with registration
+                    sql = @"select * from register_insert(:_email, :_firstName, :_lastName, :_password)";
+                    cmd = new NpgsqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("_email", tbEmail.Text);
+                    cmd.Parameters.AddWithValue("_firstName", tbFirstName.Text);
+                    cmd.Parameters.AddWithValue("_lastName", tbLastName.Text);
+                    cmd.Parameters.AddWithValue("_password", tbPassword.Text);
+
+                    if (Convert.ToInt32(cmd.ExecuteScalar()) == 1)
+                    {
+                        MessageBox.Show("Anda berhasil mendaftarkan akun Anda!", "Well done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        conn.Close();
+                        Form2 f2 = new Form2();
+                        f2.Show();
+                        this.Hide();
+                    }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error:" + ex.Message, "Registration Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message, "Registration Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }

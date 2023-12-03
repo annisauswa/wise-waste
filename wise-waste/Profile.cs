@@ -14,7 +14,7 @@ namespace wise_waste
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
-        public string Password { get; private set; } // Password we set for read-only for security purpose
+        public string Password { get; private set; }
         public string Address { get; set; }
         public string PhoneNumber { get; set; }
 
